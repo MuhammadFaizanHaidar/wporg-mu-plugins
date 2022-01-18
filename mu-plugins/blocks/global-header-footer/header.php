@@ -101,9 +101,9 @@ defined( 'WPINC' ) || die();
 					role="search"
 					method="get"
 					action="https://wordpress.org/search/do-search.php"
-					class="wp-block-search__button-outside wp-block-search__text-button global-header__search-form wp-block-search"
+					class="wp-block-search__button-inside wp-block-search__icon-button wp-block-search global-header__search-form"
 				>
-					<label for="wp-block-search__input-99" class="wp-block-search__label">
+					<label for="wp-block-search__input-99" class="wp-block-search__label screen-reader-text">
 						<?php echo esc_html_x( 'Search', 'button label', 'wporg' ); ?>
 					</label>
 					<div class="wp-block-search__inside-wrapper">
@@ -116,7 +116,11 @@ defined( 'WPINC' ) || die();
 							placeholder="<?php echo esc_attr_x( 'Search WP.org...', 'input field placeholder', 'wporg' ); ?>"
 							required=""
 						>
-						<button type="submit" class="wp-block-search__button" aria-label="<?php echo esc_attr_x( 'Submit search', 'button label', 'wporg' ); ?>"></button>
+						<button type="submit" class="wp-block-search__button has-icon" aria-label="<?php echo esc_attr_x( 'Submit search', 'button label', 'wporg' ); ?>">
+							<svg id="search-icon" class="search-icon" viewBox="0 0 24 24" width="24" height="24">
+								<path d="M13.5 6C10.5 6 8 8.5 8 11.5c0 1.1.3 2.1.9 3l-3.4 3 1 1.1 3.4-2.9c1 .9 2.2 1.4 3.6 1.4 3 0 5.5-2.5 5.5-5.5C19 8.5 16.5 6 13.5 6zm0 9.5c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"></path>
+							</svg>
+						</button>
 					</div>
 				</form>
 			</li>
